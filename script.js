@@ -4,10 +4,13 @@
             this.risposteCorrette = risposteCorrette
     };
 
-    var domanda0 = new Question("Sei Maggiorenne?", ["si", "no"], 0);
-    var domanda1 = new Question("Da quanto non balli?", ["Una settimana", "Un mese", "Un anno"], 2);
-    var domanda2 = new Question("Troverai lavoro come programmatore?", ["si", "no", "forse"], 0);
-    var domande = [domanda0, domanda1, domanda2];
+    var domanda0 = new Question("Siamo nel 2018?", ["Si", "No"], 0);
+    var domanda1 = new Question("Da quanto studi Js?", ["Una settimana", "Un mese", "Un anno"], 2);
+    var domanda2 = new Question("Finirai gli studi a tempo?", ["Si", "No", "Forse"], 0);
+    var domanda3 = new Question("Hai progetti per il futuro?", ["Si", "No", "Cercando nuove possibilità"], 3);
+    var domanda4 = new Question("Troverai lavoro come programmatore?", ["Speriamo", "Si", "No", "Forse"], 1);
+
+    var domande = [domanda0, domanda1, domanda2,domanda3,domanda4];
 
     Question.prototype.selezzionaDomanda = function () {
         console.log(this.domanda);
@@ -56,6 +59,7 @@
             nuovaDomanda();
 
         } else {
+            console.log("------------------");
             console.log("Gioco finito")
         }
 
